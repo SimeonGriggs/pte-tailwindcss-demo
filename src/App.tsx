@@ -16,10 +16,28 @@ import {
   LinkBehaviorsConfig,
 } from "@portabletext/editor/behaviors";
 import { renderAnnotation } from "./portableText/renderAnnotation";
+import { ToolbarFloating } from "./components/ToolbarFloating";
+
+const DEFAULT_VALUE = [
+  {
+    _type: "block",
+    _key: "f75c718f165f",
+    style: "normal",
+    markDefs: [],
+    children: [
+      {
+        _type: "span",
+        _key: "80515d86f85e",
+        text: "Welcome",
+        marks: [],
+      },
+    ],
+  },
+];
 
 function App() {
   const [value, setValue] = useState<Array<PortableTextBlock> | undefined>(
-    undefined,
+    DEFAULT_VALUE,
   );
 
   const linkAnnotationContext: LinkBehaviorsConfig = {
@@ -47,6 +65,7 @@ function App() {
           }}
         />
         <Toolbar />
+        <ToolbarFloating />
         <PortableTextEditable
           className="prose prose-xl prose-indigo rounded-lg border border-gray-300 bg-white px-6 py-4 shadow-inner"
           renderAnnotation={renderAnnotation}
