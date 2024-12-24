@@ -27,9 +27,9 @@ const DEFAULT_VALUE = [
     children: [
       {
         _type: "span",
-        _key: "80515d86f85e",
-        text: "Welcome",
         marks: [],
+        text: "I was bored and tried using some AI apps to add a Santa hat to our cat. It didn't go well.",
+        _key: "de92ceb5a21b",
       },
     ],
   },
